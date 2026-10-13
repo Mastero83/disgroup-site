@@ -232,3 +232,6 @@
 .aai .cta-mark{position:absolute;right:34px;bottom:-26px;width:170px;height:auto;opacity:.32;pointer-events:none;z-index:0}
 @media (max-width:860px){.aai .ctabox{padding:40px 28px 150px}.aai .cta-mark{width:110px;right:20px;bottom:-14px}}
 @media (min-width:861px){.aai .ctabox{grid-template-columns:1fr auto;padding-right:220px}.aai .ctabox>.btn{white-space:nowrap}}
+/* CTA: real DIS logo mark, white */
+.aai .cta-mark{right:48px;bottom:36px;width:84px;height:auto;opacity:.95}
+@media (max-width:860px){.aai .ctabox{padding-bottom:120px}.aai .cta-mark{width:56px;right:24px;bottom:26px}}
