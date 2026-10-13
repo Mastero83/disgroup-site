@@ -226,3 +226,9 @@
 .aai .step ol.kk-list li:before{content:none}
 .aai .kk-list span{width:20px;height:20px;border-radius:50%;background:var(--c);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;flex:none}
 .aai .kk-plot{height:300px}}
+/* CTA logo mark */
+.aai .ctabox{padding-right:230px}
+.aai .ctabox>div,.aai .ctabox>.btn{position:relative;z-index:1}
+.aai .cta-mark{position:absolute;right:34px;bottom:-26px;width:170px;height:auto;opacity:.32;pointer-events:none;z-index:0}
+@media (max-width:860px){.aai .ctabox{padding:40px 28px 150px}.aai .cta-mark{width:110px;right:20px;bottom:-14px}}
+@media (min-width:861px){.aai .ctabox{grid-template-columns:1fr auto;padding-right:220px}.aai .ctabox>.btn{white-space:nowrap}}
