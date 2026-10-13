@@ -67,7 +67,8 @@ var FALLBACK_EMAIL = 'rjaprins@gmail.com';
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok || j.success === false || j.success === 'false') throw new Error('fail'); }); })
       .then(function () {
         form.hidden = true;
-        document.getElementById('plan-summary').textContent = 'Voorkeur: ' + new Date(d1.value + 'T12:00').toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' }) + ', ' + (data.Dagdeel || '').toLowerCase() + '. We reageren via ' + data.email + '.';
+        var when = d1.value ? 'Voorkeur: ' + new Date(d1.value + 'T12:00').toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' }) + ', ' + (data.Dagdeel || '').toLowerCase() + '.' : 'We plannen samen een geschikt moment.';
+        document.getElementById('plan-summary').textContent = when + ' We reageren via ' + data.email + '.';
         success.hidden = false; success.focus();
       })
       .catch(showError)

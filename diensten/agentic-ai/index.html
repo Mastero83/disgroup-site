@@ -411,7 +411,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         </fieldset>
         <fieldset><legend>Voorkeur voor dagdeel 1</legend>
         <div class="f-row">
-          <div class="f"><label for="f-datum1">Voorkeursdatum <abbr title="verplicht">*</abbr></label><input id="f-datum1" name="Voorkeursdatum" type="date" required data-msg="Kies een voorkeursdatum."><p class="hint" id="h-datum1">Maandag t/m vrijdag</p><p class="err" id="e-datum1"></p></div>
+          <div class="f"><label for="f-datum1">Voorkeursdatum <span class="opt">(optioneel)</span></label><input id="f-datum1" name="Voorkeursdatum" type="date"><p class="hint" id="h-datum1">Maandag t/m vrijdag</p><p class="err" id="e-datum1"></p></div>
           <div class="f"><span class="lbl" id="l-dagdeel">Dagdeel</span><div class="seg" role="radiogroup" aria-labelledby="l-dagdeel"><label><input type="radio" name="Dagdeel" value="Ochtend" checked><span>Ochtend</span></label><label><input type="radio" name="Dagdeel" value="Middag"><span>Middag</span></label></div></div>
         </div>
         <div class="f-row">
@@ -435,7 +435,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </section>
 
 <script>(function(){var e=document.querySelectorAll('.aai .rv');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('in')});return}var o=new IntersectionObserver(function(t){t.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});e.forEach(function(x){o.observe(x)})})();</script>
-<script src="../../wp-content/uploads/ai/plan-sessie.js?v=3" defer></script>
+<script src="../../wp-content/uploads/ai/plan-sessie.js?v=4" defer></script>
 </main><!-- #main -->
 
 
