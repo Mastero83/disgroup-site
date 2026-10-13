@@ -79,13 +79,14 @@ De site is statisch, dus het formulier verstuurt via een externe dienst. De inst
 
 ```js
 var FORM_ENDPOINT = 'https://formsubmit.co/ajax/rjaprins@gmail.com';
-var FALLBACK_EMAIL = 'rjaprins@gmail.com';   // mailto-link bij een fout
+var CONTACT_URL = '../../contact/index.html'; // link bij een fout (geen e-mailadres zichtbaar)
 ```
 
 - **FormSubmit (huidig):** de eerste echte aanvraag stuurt een activatiemail naar het ingestelde adres;
   klik op de link daarin, daarna komen aanvragen gewoon binnen. Extra velden `_subject`, `_template=table`
   en de honeypot `_honey` staan als verborgen velden in het formulier.
-- **Ander adres (bijv. DIS):** vervang het e-mailadres in `FORM_ENDPOINT` (en `FALLBACK_EMAIL`), bijv.
+- **Adres verbergen (aanbevolen):** na de eerste echte inzending stuurt FormSubmit een activatiemail. Daarna krijg je een willekeurige alias; vervang `rjaprins@gmail.com` in `FORM_ENDPOINT` door die alias (`https://formsubmit.co/ajax/<alias>`), zodat het adres ook niet meer in de paginabron staat. Bezoekers zien het adres nergens in de succes- of foutmelding.
+- **Ander adres (bijv. DIS):** vervang het e-mailadres in `FORM_ENDPOINT`, bijv.
   `https://formsubmit.co/ajax/info@disgroup.nl`. Ook dan volgt eenmalig een activatiemail.
 - **Formspree:** maak een formulier aan op formspree.io en zet `FORM_ENDPOINT` op
   `https://formspree.io/f/<jouw-id>`. Het script post JSON met `Accept: application/json`, wat Formspree

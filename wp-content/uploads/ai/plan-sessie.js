@@ -1,7 +1,10 @@
 /* Aanvraagformulier AI-inspiratie- en werksessie (statische site, geen backend).
  * Wil je een ander adres of een andere dienst? Pas alleen FORM_ENDPOINT aan (zie README). */
+// LET OP: na activatie van FormSubmit (eerste inzending -> activatiemail) dit adres
+// vervangen door de willekeurige alias die FormSubmit geeft, bv.
+// 'https://formsubmit.co/ajax/<alias>', zodat het e-mailadres niet meer in de paginabron staat.
 var FORM_ENDPOINT = 'https://formsubmit.co/ajax/rjaprins@gmail.com';
-var FALLBACK_EMAIL = 'rjaprins@gmail.com';
+var CONTACT_URL = '../../contact/index.html'; // fallback-link bij een fout
 
 (function () {
   var form = document.getElementById('plan-form');
@@ -49,7 +52,7 @@ var FALLBACK_EMAIL = 'rjaprins@gmail.com';
   }
   function showError() {
     var subject = encodeURIComponent('Aanvraag AI-inspiratie- en werksessie');
-    alertBox.innerHTML = '<strong>Versturen is niet gelukt.</strong> Probeer het later opnieuw of mail ons direct via <a href="mailto:' + FALLBACK_EMAIL + '?subject=' + subject + '">' + FALLBACK_EMAIL + '</a>.';
+    alertBox.innerHTML = '<strong>Versturen is niet gelukt.</strong> Lukt het niet? Neem contact op via <a href="' + CONTACT_URL + '">onze contactpagina</a>.';
     alertBox.hidden = false;
   }
 
