@@ -71,3 +71,23 @@ Let op: dit is een kopie van publieke content van DIS Group; deel previews allee
 - **Dynamische onderdelen** (filters/"meer laden" in nieuws of vacatures, zoeken) die AJAX/`wp-json` gebruiken werken niet offline.
 - Links naar `/nieuws/` en `/sectoren/` (overzicht) gaven ook live een 404 en blijven naar disgroup.nl wijzen.
 - Externe embeds (bijv. Google reCAPTCHA, YouTube, Google Fonts indien gebruikt) worden nog van internet geladen.
+
+## Aanvraagformulier AI-werksessie (`diensten/agentic-ai/#plan-sessie`)
+
+De site is statisch, dus het formulier verstuurt via een externe dienst. De instelling staat bovenaan
+`wp-content/uploads/ai/plan-sessie.js`:
+
+```js
+var FORM_ENDPOINT = 'https://formsubmit.co/ajax/rjaprins@gmail.com';
+var FALLBACK_EMAIL = 'rjaprins@gmail.com';   // mailto-link bij een fout
+```
+
+- **FormSubmit (huidig):** de eerste echte aanvraag stuurt een activatiemail naar het ingestelde adres;
+  klik op de link daarin, daarna komen aanvragen gewoon binnen. Extra velden `_subject`, `_template=table`
+  en de honeypot `_honey` staan als verborgen velden in het formulier.
+- **Ander adres (bijv. DIS):** vervang het e-mailadres in `FORM_ENDPOINT` (en `FALLBACK_EMAIL`), bijv.
+  `https://formsubmit.co/ajax/info@disgroup.nl`. Ook dan volgt eenmalig een activatiemail.
+- **Formspree:** maak een formulier aan op formspree.io en zet `FORM_ENDPOINT` op
+  `https://formspree.io/f/<jouw-id>`. Het script post JSON met `Accept: application/json`, wat Formspree
+  ondersteunt; de `_`-velden van FormSubmit worden dan als gewone velden meegestuurd (onschuldig) en kun je
+  desgewenst uit de HTML verwijderen.
