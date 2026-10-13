@@ -156,3 +156,20 @@
 .aai .teaserbox img{max-height:300px;width:auto;justify-self:center;position:relative;z-index:1;border-radius:20px 20px 0 0;background:#fff;padding:20px 24px 0}
 .aai .teaserbox .squares{opacity:.12;right:auto;left:-30px;top:auto;bottom:-30px}
 @media (max-width:860px){.aai .teaserbox{grid-template-columns:1fr;padding:40px 28px 0}.aai .teaserbox img{max-height:220px}.aai .teaserbox .tx{padding-bottom:8px}}
+/* hero with video */
+.aai .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"top media" "rest media";column-gap:56px;align-items:center}
+.aai .hero-top{grid-area:top;align-self:end}.aai .hero-rest{grid-area:rest;align-self:start}.aai .hero-media{grid-area:media}
+.aai .hero{padding:88px 0 84px}
+.aai .hero .hero-grid h1{font-size:clamp(34px,3.6vw,52px)}
+.aai .hero .hero-rest p{font-size:18px}
+.aai .hero .chips{margin-top:32px}
+.aai .hero-media .vframe{margin:0;max-width:none;border-radius:20px;aspect-ratio:16/9;background:#fff;box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 6px rgba(255,255,255,.08);position:relative}
+.aai .hero-media{position:relative}
+.aai .hero-media:before{content:"";position:absolute;width:120px;height:120px;border-radius:18px;background:var(--yellow);right:-24px;top:-24px;z-index:-1;opacity:.9}
+.aai .hero-media:after{content:"";position:absolute;width:90px;height:90px;border-radius:14px;background:var(--green);left:-22px;bottom:30px;z-index:-1;opacity:.9}
+.aai .vcap{display:flex;align-items:center;gap:10px;margin:16px 0 0;font-size:14px!important;color:rgba(255,255,255,.8)!important}
+.aai .vcap .play{width:26px;height:26px;border-radius:50%;background:var(--blue);position:relative;flex:none}
+.aai .vcap .play:after{content:"";position:absolute;left:10px;top:8px;border:5px solid transparent;border-left:8px solid #fff;border-right:0}
+@media (max-width:1100px){.aai .hero-grid{grid-template-columns:1fr;grid-template-areas:"top" "media" "rest"}.aai .hero-media{margin:8px 0 28px}.aai .hero{padding:64px 0 64px}.aai .hero-media:before{width:70px;height:70px;right:-10px;top:-14px}.aai .hero-media:after{width:56px;height:56px;left:-10px;bottom:20px}}
+@media (max-width:560px){.aai .hero .hero-grid h1{font-size:30px}.aai .hero-media .vframe{border-radius:14px}}
+@media (min-width:1101px){.aai .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);column-gap:48px}.aai .hero-grid-wide{max-width:1320px}.aai .hero .hero-grid h1{font-size:clamp(34px,3.2vw,46px)}.aai .hero .ctas .btn{padding:14px 22px;font-size:15px}.aai .hero .ctas{gap:10px}}
