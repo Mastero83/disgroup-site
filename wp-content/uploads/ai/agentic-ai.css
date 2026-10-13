@@ -235,3 +235,7 @@
 /* CTA: real DIS logo mark, white */
 .aai .cta-mark{right:48px;bottom:36px;width:84px;height:auto;opacity:.95}
 @media (max-width:860px){.aai .ctabox{padding-bottom:120px}.aai .cta-mark{width:56px;right:24px;bottom:26px}}
+/* CTA logo larger, tight bottom-right */
+.aai .cta-mark{width:150px;right:20px;bottom:20px;opacity:.95}
+@media (min-width:861px){.aai .ctabox{padding-right:210px;min-height:260px}}
+@media (max-width:860px){.aai .ctabox{padding-bottom:160px}.aai .cta-mark{width:90px;right:16px;bottom:16px}}
