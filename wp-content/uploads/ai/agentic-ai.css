@@ -374,3 +374,17 @@
 .aai .notool-sys.ai li{display:flex;align-items:center;gap:6px;border:1px solid rgba(49,159,218,.35)}
 .aai .notool-sys.ai svg{width:14px;height:14px;fill:none;stroke:#319fda;stroke-width:1.8;stroke-linejoin:round}
 @media (max-width:860px){.aai .notool-rows{grid-column:1}.aai .notool-row{flex-direction:column;align-items:flex-start;gap:6px}.aai .notool-lbl{min-width:0}}
+/* 4 rollen + strip */
+.aai .roles.roles4{grid-template-columns:repeat(4,1fr);gap:20px;max-width:1080px;margin-left:auto;margin-right:auto}
+.aai .roles-more{max-width:1080px;margin:20px auto 0;display:grid;grid-template-columns:minmax(220px,1.1fr) 2fr auto;gap:22px;align-items:center;background:#fff;border:1px dashed #c9d6e4;border-radius:16px;padding:20px 26px}
+.aai .roles-more h3{font-size:17px;margin:0 0 4px;color:#001a3f}
+.aai .roles-more p{margin:0;font-size:14px;line-height:1.5;color:#5b6b80}
+.aai .rm-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.aai .rm-chips li{margin:0;padding:6px 12px;border-radius:999px;background:#eef4fa;color:#001a3f;font:600 13px/1.2 "Poppins",sans-serif}
+.aai .rm-chips li::before{display:none}
+.aai .rm-link{white-space:nowrap;font:600 14px/1 "Poppins",sans-serif;color:#319fda;text-decoration:none;padding:11px 16px;border:1.5px solid #319fda;border-radius:999px;transition:background .2s,color .2s}
+.aai .rm-link:hover,.aai .rm-link:focus-visible{background:#319fda;color:#fff}
+@media (max-width:1100px){.aai .roles.roles4{grid-template-columns:repeat(2,1fr)}.aai .roles-more{grid-template-columns:1fr;gap:14px}.aai .rm-link{justify-self:start}}
+@media (max-width:560px){.aai .roles.roles4{gap:12px}.aai .roles-more{padding:18px}}
+@media (max-width:1100px){.aai .roles.roles4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.aai .roles.roles4 .role{min-width:0;padding-left:16px;padding-right:16px}.aai .roles.roles4 .role h3{font-size:15px!important;overflow-wrap:normal;word-break:normal;hyphens:auto}}
