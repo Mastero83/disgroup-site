@@ -1,0 +1,13 @@
+.dis-vid{padding:24px 0 56px}
+.dis-vid .wrap{max-width:1080px;margin:0 auto;padding:0 24px;text-align:center}
+.dis-vid .kick{display:inline-flex;align-items:center;gap:10px;font:600 13px/1 "Poppins",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#319fda;margin-bottom:14px}
+.dis-vid .kick i{display:inline-block;width:22px;height:4px;border-radius:2px;background:linear-gradient(90deg,#319fda 0 33%,#7db928 33% 66%,#fbb815 66%)}
+.dis-vid h2{color:#001a3f;margin:0 0 12px}
+.dis-vid p.lead{color:#5b6b80;max-width:640px;margin:0 auto 34px;font-size:17px;line-height:1.6}
+.dis-vid .frame{position:relative;max-width:960px;margin:0 auto}
+.dis-vid .frame::before,.dis-vid .frame::after{content:"";position:absolute;width:90px;height:90px;border-radius:18px;z-index:-1}
+.dis-vid .frame::before{background:#fbb815;top:-18px;right:-18px}
+.dis-vid .frame::after{background:#7db928;bottom:-18px;left:-18px}
+.dis-vid video{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:18px;background:#fff;box-shadow:0 24px 60px rgba(0,26,63,.18),0 4px 14px rgba(0,26,63,.08)}
+.dis-vid .meta{margin-top:18px;color:#7a8799;font-size:14px}
+@media (max-width:700px){.dis-vid{padding:16px 0 32px}.dis-vid .frame::before,.dis-vid .frame::after{width:54px;height:54px;border-radius:12px}.dis-vid .frame::before{top:-10px;right:-8px}.dis-vid .frame::after{bottom:-10px;left:-8px}.dis-vid video{border-radius:12px}.dis-vid p.lead{font-size:16px}}
